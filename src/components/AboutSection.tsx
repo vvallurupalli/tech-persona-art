@@ -3,37 +3,52 @@ const AboutSection = () => {
     <section className="py-16 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
-          About <span className="gradient-text">Me</span>
+          The Perpetual Tech Student{" "}
+          <span className="gradient-text">(Who Also Happens to Have 20+ Years of Experience)</span>
         </h2>
 
-        <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+        <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
           <p>
-            I'm a <span className="text-foreground font-medium">technologist at heart</span> with 
-            a passion for staying up-to-date with emerging technologies. Over two decades, I've led 
-            teams and contributed individually across diverse domains—from API development and Cloud 
-            Engineering to DevOps and Contact Center solutions with Avaya and Genesys Cloud.
+            I'm that person who treats "emerging technologies" like some people treat Netflix releases—gotta 
+            stay current, gotta know what's next. Over two decades, I've bounced between leading teams and 
+            rolling up my sleeves to code alongside them, touching everything from{" "}
+            <span className="text-foreground font-medium">Java UI/API wizardry and backend sorcery</span> to 
+            Cloud Engineering, DevOps pipelines, and taming contact centers with Avaya and Genesys Cloud. 
+            Recently, I even added .NET to the mix because apparently, I can't help myself.
           </p>
 
-          <p>
-            My journey into <span className="text-primary font-medium">Artificial Intelligence</span> has 
-            been particularly exciting. From exploratory data analysis with pandas to feature engineering 
-            and building predictive models using Keras/TensorFlow, I love the creative ways we can 
-            manipulate and learn from data.
-          </p>
+          <div>
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
+              When AI Became My New <span className="gradient-text">Obsession</span>
+            </h3>
+            <p className="mb-4">
+              Then Artificial Intelligence happened, and let's just say it clicked. Hard. I went from casually 
+              exploring data with pandas (as one does) to full-on feature engineering and building predictive 
+              models with Keras and TensorFlow. There's something delightfully nerdy about coaxing insights 
+              out of data—it's like solving puzzles, except the puzzles fight back.
+            </p>
+            <p>
+              Case in point: I dove into Anthropic's AI-Human conversation dataset (hh-rlhf, for the acronym 
+              enthusiasts) and built models to predict which responses humans would accept or reject. Spoiler 
+              alert: teaching machines to understand human preferences is both fascinating and slightly 
+              existential. I've also dabbled in{" "}
+              <span className="text-foreground font-medium">inference attack simulations</span>—because why 
+              not explore the cybersecurity dark arts?—and created RAG-based chatbots using OpenAI and Pinecone 
+              vector databases that actually remember what you told them three messages ago.
+            </p>
+          </div>
 
-          <p>
-            One of my notable projects involved working with Anthropic's AI-Human conversations 
-            (hh-rlhf) dataset—extracting features and building models to predict whether responses 
-            would be accepted or rejected by humans. I've also explored inference attack simulations 
-            and built RAG-based chatbots using OpenAI and Pinecone vector databases.
-          </p>
-
-          <p>
-            Beyond tech, I'm deeply committed to <span className="text-foreground font-medium">fighting 
-            misinformation</span>. I've built a global web platform with admin capabilities to expand 
-            our fake news verification club across regions, powered by contributors, researchers, 
-            and verifiers worldwide.
-          </p>
+          <div>
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
+              The Truth <span className="gradient-text">Crusader</span>
+            </h3>
+            <p>
+              But here's where my "why" lives: I really hate misinformation. So much so that I built a global 
+              platform to combat fake news, complete with admin superpowers and a worldwide network of 
+              contributors, researchers, and verifiers. Because if we're building powerful tech, we might as 
+              well use it to keep the truth... well, true.
+            </p>
+          </div>
         </div>
       </div>
     </section>
