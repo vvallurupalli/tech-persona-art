@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Brain, FolderOpen, Cpu, Wrench, Sparkles } from "lucide-react";
+import { Briefcase, Brain, FolderOpen, Cpu, Wrench, Sparkles, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -13,11 +13,34 @@ const Index = () => {
     <main className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b border-border bg-card/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <h1 className="text-2xl font-bold">
-            Venkat <span className="gradient-text">V</span>
-          </h1>
-          <p className="text-sm text-muted-foreground">Technologist • AI Enthusiast • 20 Years Experience</p>
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold">
+              Venkat <span className="gradient-text">V</span>
+            </h1>
+            <p className="text-sm text-muted-foreground">Technologist • AI Enthusiast • 20 Years Experience</p>
+          </div>
+          
+          {/* Top Navigation */}
+          <nav className="flex items-center gap-1 md:gap-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.id}
+                to={item.path}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+              >
+                <item.icon className="w-4 h-4" />
+                <span className="hidden sm:inline">{item.label}</span>
+              </Link>
+            ))}
+            <a
+              href="#contact"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all ml-1"
+            >
+              <Mail className="w-4 h-4" />
+              <span className="hidden sm:inline">Keep in Touch</span>
+            </a>
+          </nav>
         </div>
       </header>
 
