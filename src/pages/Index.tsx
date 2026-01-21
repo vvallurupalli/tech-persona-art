@@ -34,7 +34,7 @@ const Index = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <span>I love simplicity, Chipotle-style—brilliantly simple and exactly what you need.</span>
+              <span>I love simplicity, Chipotle-style—brilliantly simple, decent choices and exactly what you need.</span>
             </motion.li>
             
             <motion.li
