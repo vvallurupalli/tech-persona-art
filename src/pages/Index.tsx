@@ -22,12 +22,12 @@ const Index = () => {
           </div>
           
           {/* Top Navigation */}
-          <nav className="flex items-center gap-1 md:gap-2">
+          <nav className="flex items-center gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.id}
                 to={item.path}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
               >
                 <item.icon className="w-4 h-4" />
                 <span className="hidden sm:inline">{item.label}</span>
@@ -35,7 +35,7 @@ const Index = () => {
             ))}
             <a
               href="#contact"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all ml-1"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
             >
               <Mail className="w-4 h-4" />
               <span className="hidden sm:inline">Keep in Touch</span>
