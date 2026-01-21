@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const skills = {
-  "Cloud & DevOps": ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "CI/CD", "Terraform"],
-  "AI & Machine Learning": ["TensorFlow", "Keras", "PyTorch", "Pandas", "Scikit-learn", "OpenAI API", "LangChain"],
-  "Development": ["Python", "JavaScript", "TypeScript", "React", "Node.js", "REST APIs", "GraphQL"],
+  "Cloud & DevOps": ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Terraform"],
+  "AI & Machine Learning": ["TensorFlow", "Keras", "Pandas", "Scikit-learn", "OpenAI API", "LangChain"],
+  "Development": ["Java", "Python", "JavaScript", "TypeScript", "React", "Node.js", "REST APIs", "GraphQL"],
   "Contact Center": ["Avaya", "Genesys Cloud", "IVR Systems", "CTI"],
-  "Databases & Tools": ["PostgreSQL", "MongoDB", "Pinecone", "Redis", "Git"],
+  "Databases & Tools": ["PostgreSQL", "SQL Server", "Oracle", "MongoDB", "Pinecone", "Redis", "Git"],
 };
 
 const SkillsSection = () => {
