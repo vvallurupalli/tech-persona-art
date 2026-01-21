@@ -74,9 +74,9 @@ const Index = () => {
                 className="flex items-start gap-4"
               >
                 <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
-                  <Cpu className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                 </div>
-                <span>Working on some fun stuff with ESP-32</span>
+                <span>I love simplicity, Chipotle-style—brilliantly simple and exactly what you need.</span>
               </motion.li>
               
               <motion.li
@@ -86,12 +86,21 @@ const Index = () => {
                 className="flex items-start gap-4"
               >
                 <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
-                  <Sparkles className="w-5 h-5" />
+                  <FolderOpen className="w-5 h-5" />
                 </div>
-                <span>
-                  I love simplicity, Chipotle-style—brilliantly simple and exactly what you need. 
-                  Build solutions that actually work. Skip the "just in case" feature bloat.
-                </span>
+                <span>Build solutions that actually work. Skip the "just in case" feature bloat.</span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                className="flex items-start gap-4"
+              >
+                <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <span>Currently working on some fun stuff with ESP-32</span>
               </motion.li>
             </ul>
 
