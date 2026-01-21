@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => {
             <h1 className="text-2xl font-bold">
               Venkat <span className="gradient-text">V</span>
             </h1>
-            <p className="text-sm text-muted-foreground">Technologist • AI Enthusiast • 20 Years Experience</p>
+            <p className="text-sm text-muted-foreground">Engineer • Masters in Computer Science • AI Enthusiast</p>
           </Link>
           
           {/* Top Navigation */}
