@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Briefcase, Brain, FolderOpen, Mail } from "lucide-react";
+import { Briefcase, Brain, FolderOpen, Mail, Home } from "lucide-react";
 
 const navItems = [
+  { id: "home", label: "Home", icon: Home, path: "/" },
   { id: "skills", label: "Skills", icon: Briefcase, path: "/skills" },
   { id: "ai", label: "AI Focus", icon: Brain, path: "/ai" },
   { id: "projects", label: "Projects", icon: FolderOpen, path: "/projects" },
