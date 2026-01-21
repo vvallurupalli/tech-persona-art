@@ -8,7 +8,7 @@ const projects = [
     icon: Shield,
     website: "https://www.zingerfi.com",
     github: "https://github.com/vvallurupalli/zingerfi-web.git",
-    tags: ["Encryption", "ECC 256", "Security", "Privacy"],
+    tags: ["Encryption", "ECC 256", "OAuth", "Security", "Privacy"],
   },
   {
     title: "Snitchon",
