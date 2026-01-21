@@ -38,11 +38,11 @@ const Layout = ({ children }: LayoutProps) => {
               </Link>
             ))}
             <a
-              href="#contact"
+              href="mailto:vvallurupalli@gmail.com"
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
             >
               <Mail className="w-4 h-4" />
-              <span className="hidden sm:inline">Keep in Touch</span>
+              <span className="hidden sm:inline">vvallurupalli@gmail.com</span>
             </a>
           </nav>
         </div>
