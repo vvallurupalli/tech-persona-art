@@ -22,7 +22,7 @@ const Index = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
                 <Wrench className="w-5 h-5" />
               </div>
-              <span>I am an Engineer.</span>
+              <span>I am an Engineer with a Masters in Computer Science.</span>
             </motion.li>
             
             <motion.li

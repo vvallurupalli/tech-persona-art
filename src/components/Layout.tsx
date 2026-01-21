@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Briefcase, Brain, FolderOpen, Mail, Home } from "lucide-react";
+import { Briefcase, Brain, FolderOpen, Mail, Home, Copy, Check } from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
   { id: "home", label: "Home", icon: Home, path: "/" },
@@ -13,6 +14,15 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const [copied, setCopied] = useState(false);
+  const email = "vvallurupalli@gmail.com";
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
@@ -38,12 +48,20 @@ const Layout = ({ children }: LayoutProps) => {
               </Link>
             ))}
             <a
-              href="mailto:vvallurupalli@gmail.com"
+              href={`mailto:${email}`}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
             >
               <Mail className="w-4 h-4" />
-              <span className="hidden sm:inline">vvallurupalli@gmail.com</span>
+              <span className="hidden sm:inline">{email}</span>
             </a>
+            <button
+              onClick={copyEmail}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all"
+              title="Copy email address"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              <span className="hidden sm:inline">{copied ? "Copied!" : "Copy"}</span>
+            </button>
           </nav>
         </div>
       </header>
