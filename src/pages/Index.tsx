@@ -1,94 +1,97 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { User, Briefcase, Brain, FolderOpen, Mail } from "lucide-react";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import AIFocusSection from "@/components/AIFocusSection";
-import ContactSection from "@/components/ContactSection";
+import { motion } from "framer-motion";
+import { Briefcase, Brain, FolderOpen, Cpu } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const tabs = [
-  { id: "about", label: "About", icon: User },
-  { id: "skills", label: "Skills", icon: Briefcase },
-  { id: "ai", label: "AI Focus", icon: Brain },
-  { id: "projects", label: "Projects", icon: FolderOpen },
-  { id: "contact", label: "Contact", icon: Mail },
+const navItems = [
+  { id: "skills", label: "Skills", icon: Briefcase, path: "/skills" },
+  { id: "ai", label: "AI Focus", icon: Brain, path: "/ai" },
+  { id: "projects", label: "Projects", icon: FolderOpen, path: "/projects" },
 ];
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState("about");
-
-  const renderContent = () => {
-    switch (activeTab) {
-      case "about":
-        return <AboutSection />;
-      case "skills":
-        return <SkillsSection />;
-      case "ai":
-        return <AIFocusSection />;
-      case "projects":
-        return <ProjectsSection />;
-      case "contact":
-        return <ContactSection />;
-      default:
-        return <AboutSection />;
-    }
-  };
-
   return (
-    <main className="min-h-screen bg-background">
-      {/* Header with name */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <main className="min-h-screen bg-background flex flex-col">
+      {/* Header */}
+      <header className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-2xl font-bold">
-                Venkat <span className="gradient-text">V</span>
-              </h1>
-              <p className="text-sm text-muted-foreground">Technologist • AI Enthusiast • 20 Years Experience</p>
-            </div>
-            
-            {/* Tab Navigation */}
-            <nav className="flex gap-1 overflow-x-auto pb-1 sm:pb-0">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap ${
-                    activeTab === tab.id
-                      ? "text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                  }`}
-                >
-                  {activeTab === tab.id && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-primary rounded-lg glow-border"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
-                  <tab.icon className="w-4 h-4 relative z-10" />
-                  <span className="relative z-10 hidden md:inline">{tab.label}</span>
-                </button>
-              ))}
-            </nav>
-          </div>
+          <h1 className="text-2xl font-bold">
+            Venkat <span className="gradient-text">V</span>
+          </h1>
+          <p className="text-sm text-muted-foreground">Technologist • AI Enthusiast • 20 Years Experience</p>
         </div>
       </header>
 
-      {/* Tab Content */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.3 }}
-          className="min-h-[calc(100vh-120px)]"
-        >
-          {renderContent()}
-        </motion.div>
-      </AnimatePresence>
+      {/* Main Content */}
+      <div className="flex-1 flex items-center justify-center px-6 py-16">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
+          >
+            {/* Bullets */}
+            <ul className="space-y-6 text-lg md:text-xl text-foreground">
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-primary mt-1">—</span>
+                <span>I am an Engineer.</span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-primary mt-1">—</span>
+                <span className="flex items-center gap-2">
+                  Working on some fun stuff with ESP-32
+                  <Cpu className="w-5 h-5 text-primary" />
+                </span>
+              </motion.li>
+              
+              <motion.li
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="flex items-start gap-3"
+              >
+                <span className="text-primary mt-1">—</span>
+                <span>
+                  I love simplicity, Chipotle-style—brilliantly simple and exactly what you need. 
+                  Build solutions that actually work. Skip the "just in case" feature bloat.
+                </span>
+              </motion.li>
+            </ul>
+
+            {/* Navigation Icons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="flex gap-4 pt-8"
+            >
+              {navItems.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  className="group flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-card hover:bg-secondary/50 hover:border-primary/50 transition-all"
+                >
+                  <item.icon className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                    {item.label}
+                  </span>
+                </Link>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="py-6 px-6 border-t border-border">
