@@ -4,6 +4,7 @@ import { ExternalLink, Github, Shield, Globe, Bot } from "lucide-react";
 const projects = [
   {
     title: "ZingerFi",
+    problem: "Very important SMS/Whatsapp/Telegram messages are not encrypted at rest on our phone.",
     description: "Send encrypted data to your known confidees that only they can decrypt using ECC 256 asymmetric encryption. A secure communication platform for sensitive information exchange.",
     icon: Shield,
     website: "https://www.zingerfi.com",
@@ -12,6 +13,7 @@ const projects = [
   },
   {
     title: "Snitchon",
+    problem: "With advent of AI, fake news is just out of control.",
     description: "A global organization dedicated to curbing fake news. Actively expanding with chapters in Asia, Australia, Uganda, and South Africa. Building a network of contributors, researchers, and verifiers.",
     icon: Globe,
     website: "https://www.snitchon.org",
@@ -20,6 +22,7 @@ const projects = [
   },
   {
     title: "BVSD AI",
+    problem: "BVSD site has too much data and difficult to navigate for needed answers.",
     description: "An AI chatbot for answering questions about Blue Valley School District. Leverages recursive web scraping to procure answers from thousands of BVSD web pages.",
     icon: Bot,
     website: "https://bvsd.snitchon.org",
@@ -53,6 +56,12 @@ const ProjectsSection = () => {
                   <project.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-semibold">{project.title}</h3>
+              </div>
+
+              <div className="mb-3 p-3 rounded-lg bg-destructive/10 border border-destructive/20">
+                <p className="text-sm text-destructive font-medium">
+                  <span className="font-bold">Problem:</span> {project.problem}
+                </p>
               </div>
 
               <p className="text-muted-foreground mb-4 flex-grow leading-relaxed">
