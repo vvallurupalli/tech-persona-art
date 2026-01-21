@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Brain, FolderOpen, Cpu } from "lucide-react";
+import { Briefcase, Brain, FolderOpen, Cpu, Wrench, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -36,9 +36,11 @@ const Index = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-4"
               >
-                <span className="text-primary mt-1">—</span>
+                <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                  <Wrench className="w-5 h-5" />
+                </div>
                 <span>I am an Engineer.</span>
               </motion.li>
               
@@ -46,22 +48,23 @@ const Index = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-4"
               >
-                <span className="text-primary mt-1">—</span>
-                <span className="flex items-center gap-2">
-                  Working on some fun stuff with ESP-32
-                  <Cpu className="w-5 h-5 text-primary" />
-                </span>
+                <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <span>Working on some fun stuff with ESP-32</span>
               </motion.li>
               
               <motion.li
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-4"
               >
-                <span className="text-primary mt-1">—</span>
+                <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                  <Sparkles className="w-5 h-5" />
+                </div>
                 <span>
                   I love simplicity, Chipotle-style—brilliantly simple and exactly what you need. 
                   Build solutions that actually work. Skip the "just in case" feature bloat.
